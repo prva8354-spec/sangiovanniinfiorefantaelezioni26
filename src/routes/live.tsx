@@ -43,7 +43,7 @@ function LivePage() {
 
   useEffect(() => {
     fetchData()
-    const interval = setInterval(fetchData, 30000)
+    const interval = setInterval(fetchData, 300000)
     return () => clearInterval(interval)
   }, [])
 
@@ -70,6 +70,14 @@ function LivePage() {
             <p className="text-slate-500 text-sm mt-2">Ultimo aggiornamento: {lastUpdate}</p>
           )}
         </div>
+        <div className="mt-4">
+  <button
+    onClick={fetchData}
+    className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-4 py-2 rounded-lg font-bold text-sm"
+  >
+    🔄 Aggiorna
+  </button>
+</div>
 
         {loading ? (
           <div className="text-center text-slate-400 py-20">Caricamento...</div>
