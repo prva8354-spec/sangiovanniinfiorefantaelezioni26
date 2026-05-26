@@ -59,8 +59,8 @@ function calcScore(team: TeamRow, results: Result[]): number {
     if (cr.elected) score += 30
     else if (cr.listAboveThreshold) score += 10
   }
-
-  return score
+console.log ('TOTAL SCORE:', score)
+  return Number(score.toFixed(2))
 }
 
 export const Route = createFileRoute('/classifica')({
