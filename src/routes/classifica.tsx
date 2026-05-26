@@ -48,6 +48,7 @@ function calcScore(team: TeamRow, results: Result[]): number {
       console.log ('PREDICTED:', predicted, 'REAL:', mayorResult.percentage)
       const diff = Math.abs(predicted - mayorResult.percentage)
       const bonus = Math.max(0, 25 - diff) 
+      console.log('BONUS:', bonus)
       score += bonus
     }
   }
