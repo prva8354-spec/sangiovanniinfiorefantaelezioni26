@@ -44,8 +44,9 @@ function calcScore(team: TeamRow, results: Result[]): number {
     // Percentage bonus
     const predicted = team.mayorPercentages?.[team.mayorId]
     if (predicted != null && mayorResult.percentage != null) {
+      console.log ('PREDICTED:', predicted, 'REAL:', mayorResult.percentage)
       const diff = Math.abs(predicted - mayorResult.percentage)
-      const bonus = Math.max(0, 25 - Math.floor(diff))
+      const bonus = Math.max(0, 25 - diff) 
       score += bonus
     }
   }
