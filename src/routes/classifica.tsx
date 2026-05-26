@@ -29,6 +29,7 @@ function calcScore(team: TeamRow, results: Result[]): number {
 
   // Mayor score
   const mayorResult = resultMap[team.mayorId]
+  console.log ('MAYOR RESULT:', mayorResult) 
   if (mayorResult) {
     if (mayorResult.elected && !mayorResult.electedBallot) score += 75
     else if (mayorResult.elected && mayorResult.electedBallot) score += 35
