@@ -12,10 +12,10 @@
   "@netlify/database": "^1.0.0",
   "@netlify/identity": "^1.2.0",
   "@tailwindcss/vite": "4.2.2",
-  "@tanstack/react-router": "^1.67.3",
-  "@tanstack/react-start": "^1.67.3",
-  "@tanstack/router-plugin": "^1.67.3",
-  "@tanstack/router-core": "^1.67.3",
+  "@tanstack/react-router": "^1.132.0",
+"@tanstack/react-start": "^1.132.0",
+"@tanstack/router-plugin": "^1.132.0",
+"@tanstack/router-core": "^1.132.0",
     "drizzle-orm": "^1.0.0-beta.22",
     "highlight.js": "11.11.1",
     "lucide-react": "0.576.0",
@@ -39,7 +39,8 @@
     "vite": "7.3.3"
   },
  "overrides": {
-  "@tanstack/react-router": "^1.67.3",
-  "@tanstack/router-core": "^1.67.3"
+  "overrides": {
+  "@tanstack/react-router": "^1.132.0",
+  "@tanstack/router-core": "^1.132.0"
 }
   }
