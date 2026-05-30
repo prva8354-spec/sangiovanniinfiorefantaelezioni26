@@ -39,7 +39,6 @@
     "vite": "7.3.3"
   },
  "overrides": {
-  "overrides": {
   "@tanstack/react-router": "^1.132.0",
   "@tanstack/router-core": "^1.132.0"
 }
