@@ -39,9 +39,27 @@ function calcScore(team: Team, results: ElectionResult[]): number {
 
   const mayorResult = resultMap[team.mayorId]
   if (mayorResult) {
-    if (mayorResult.elected && !mayorResult.electedBallot) score += 75
-    else if (mayorResult.elected && mayorResult.electedBallot) score += 35
-    else if (mayorResult.percentage != null && mayorResult.percentage < 10) score -= 10
+    
+    if (mayorResult.elected && !mayorResult.electedBallot) {
+  // eletto al primo turno
+  score += 75
+
+} else if (mayorResult.electedBallot) {
+  // arrivato al ballottaggio
+  score += 35
+
+  // bonus finale ballottaggio
+  if (mayorResult.elected) {
+    // ha vinto il ballottaggio
+    score += 40
+  } else {
+    // ha perso il ballottaggio
+    score += 20
+  }
+
+} else if (mayorResult.percentage != null && mayorResult.percentage < 10) {
+  score -= 10
+}
 
     const allNonElected = results.filter(r => r.candidateType === 'mayor' && !r.elected && r.percentage != null)
     if (!mayorResult.elected && mayorResult.percentage != null && allNonElected.length > 0) {
