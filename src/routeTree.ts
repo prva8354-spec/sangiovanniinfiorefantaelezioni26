@@ -6,6 +6,7 @@ import { Route as LiveRoute } from './routes/live'
 import { Route as LoginRoute } from './routes/login'
 import { Route as RegolamentoRoute } from './routes/regolamento'
 import { Route as SquadraRoute } from './routes/squadra'
+
 const indexRoute = IndexRoute.update({
   getParentRoute: () => rootRoute,
 })
