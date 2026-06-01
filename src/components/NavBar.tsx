@@ -32,16 +32,15 @@ export function NavBar() {
               Classifica
             </Link>
             <Link to="/live" className="text-slate-300 hover:text-amber-400 transition-colors text-sm font-medium">
-              <span className="inline-flex items-center gap-1">
-                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                Live
-              </span>
-            </Link>
-            {ready && user ? (
-      <Link 
+  <span className="inline-flex items-center gap-1">
+    <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+    Live
+  </span>
+</Link>
+
+<Link 
   to="/ballottaggio" 
-  className="block text-slate-300 hover:text-amber-400 py-1" 
-  onClick={() => setMenuOpen(false)}
+  className="text-slate-300 hover:text-amber-400 transition-colors text-sm font-medium"
 >
   Ballottaggio
 </Link>
