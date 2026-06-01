@@ -1,4 +1,4 @@
-import { rootRoute } from './routes/__root'
+import { Route as rootRoute } from './routes/__root'
 import { Route as IndexRoute } from './routes/index'
 import { Route as BallottaggioRoute } from './routes/ballottaggio'
 import { Route as ClassificaRoute } from './routes/classifica'
@@ -6,7 +6,6 @@ import { Route as LiveRoute } from './routes/live'
 import { Route as LoginRoute } from './routes/login'
 import { Route as RegolamentoRoute } from './routes/regolamento'
 import { Route as SquadraRoute } from './routes/squadra'
-
 const indexRoute = IndexRoute.update({
   getParentRoute: () => rootRoute,
 })
