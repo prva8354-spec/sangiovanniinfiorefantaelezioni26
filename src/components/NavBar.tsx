@@ -38,6 +38,13 @@ export function NavBar() {
               </span>
             </Link>
             {ready && user ? (
+      <Link 
+  to="/ballottaggio" 
+  className="block text-slate-300 hover:text-amber-400 py-1" 
+  onClick={() => setMenuOpen(false)}
+>
+  Ballottaggio
+</Link>
               <>
                 <Link to="/squadra" className="text-slate-300 hover:text-amber-400 transition-colors text-sm font-medium">
                   La mia squadra
