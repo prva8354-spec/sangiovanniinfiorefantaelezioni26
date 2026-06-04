@@ -2,19 +2,19 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { NavBar } from '../components/NavBar'
 import { useIdentity } from '../lib/identity-context'
 import { mayors } from '../data/candidates'
+import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
-  component: HomePage,
+  component: Home,
 })
 
-function HomePage() {
-  const user = null
-const ready = true
-  // import { useIdentity } from '../lib/identity-context'
-
+function Home() {
   return (
-    <div className="min-h-screen">
-      <NavBar />
+    <div style={{ padding: '40px', color: 'white' }}>
+      <h1>TEST OK</h1>
+    </div>
+  )
+}
 
       {/* Hero */}
       <section className="relative overflow-hidden">
