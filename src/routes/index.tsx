@@ -8,7 +8,9 @@ export const Route = createFileRoute('/')({
 })
 
 function HomePage() {
-  const { user, ready } = useIdentity()
+  const user = null
+const ready = true
+  // import { useIdentity } from '../lib/identity-context'
 
   return (
     <div className="min-h-screen">
@@ -71,7 +73,7 @@ function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { icon: '📝', step: '1', title: 'Registrati', desc: 'Crea il tuo account gratuito con email e password. Ogni utente può creare una sola squadra.' },
-            { icon: '⚽', step: '2', title: 'Crea la squadra', desc: 'Scegli 1 sindaco, da 5 a 10 consiglieri da qualsiasi lista e inserisci le tue previsioni percentuali.' },
+            { icon: '⚽️', step: '2', title: 'Crea la squadra', desc: 'Scegli 1 sindaco, da 5 a 10 consiglieri da qualsiasi lista e inserisci le tue previsioni percentuali.' },
             { icon: '🏆', step: '3', title: 'Vinci la classifica', desc: 'Accumula punti in base ai risultati reali delle elezioni. Chi ha più punti vince!' },
           ].map((item) => (
             <div key={item.step} className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center hover:border-amber-500/40 transition-colors">
