@@ -22,11 +22,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="bg-slate-950 text-white min-h-screen">
-        <IdentityProvider>
-          <CallbackHandler>
-            {children}
-          </CallbackHandler>
-        </IdentityProvider>
+       <>
+  {children}
+</>
         <Scripts />
       </body>
     </html>
